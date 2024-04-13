@@ -23,8 +23,7 @@ jobs:
 
       - name: Docker push
         run: |
-            docker build . --file Dockerfile --tag renki/PythonMath:latest
-            docker push RenkiBrenki/PythonMath:latest
+            sh zapakiraj_27594.sh
         
 
       
