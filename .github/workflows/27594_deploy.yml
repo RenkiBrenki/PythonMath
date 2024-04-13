@@ -22,4 +22,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Push
+        run: |
+            docker build . --file Dockerfile --tag RenkiBrenki/PythonMath:latest
+            docker push RenkiBrenki/PythonMath:latest
+        
+
       
