@@ -1,6 +1,6 @@
 mkdir docker_dir
 cd docker_dir
-docker run -it --name testing2 renki/pythonmath
-docker rm testing2
+docker run -it --name test renki/pythonmath
+docker rm test
 cd ..
 rmdir docker_dir
