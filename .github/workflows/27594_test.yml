@@ -30,6 +30,7 @@ jobs:
         with:
           name: file_exists
           path: error.txt
+          retention-days: 1
           
   build:
     needs: checkForTests
