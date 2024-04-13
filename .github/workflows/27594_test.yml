@@ -50,7 +50,7 @@ jobs:
       - name: Check artifact
         shell: bash
         run: |
-          value=`cat file.txt`
+          value=`cat error.txt`
           rm file.txt
           if [ "$value" -gt 0 ]; then
                   echo "no file"
