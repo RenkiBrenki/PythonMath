@@ -39,6 +39,21 @@ jobs:
         python-version: [3.9.12 ,3.10.4, 3.11.0, 3.12.3]
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: file_exists
+
+      - name: Check artifact
+        shell: bash
+        run: |
+          value=`cat file.txt`
+          rm file.txt
+          if [ "$value" -gt 0 ]; then
+                  echo "no file"
+                  exit 1
+          fi
 
       - name: setup Python
         uses: actions/setup-python@v4
